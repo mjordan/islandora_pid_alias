@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A first attempt at addressing https://github.com/Islandora-CLAW/CLAW/issues/822. Create a URL alias for a node from its Islandora 7.x PID, if that field is populated in the node.
+A first attempt at addressing https://github.com/Islandora-CLAW/CLAW/issues/822. Create a URL alias for a node from its Islandora 7.x path (e.g. `/islandora/PID`), if the PID field is populated in the Drupal 8 node. If the PID field is not present or populated, it does nothing.
 
 ## Requirements
 
