@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_node_insert().
+ */
+function islandora_pid_alias_node_insert(NodeInterface $node) {
+  $path = \Drupal::service('path.alias_storage')->save("/node/" . $node->id(), "/mynewpath/" . $node->id, "en");
+}

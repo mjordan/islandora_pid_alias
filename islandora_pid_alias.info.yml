@@ -1,0 +1,7 @@
+type: module
+name: 'Islandora PID Alias'
+description: "Creates a URL alias from an object's 7.x PID to its 8.x URL."
+package: islandora
+core: 8.x
+dependencies:
+  - islandora
