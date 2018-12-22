@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A first attempt at addressing https://github.com/Islandora-CLAW/CLAW/issues/822. Create a URL alias for a node from its Islandora 7.x path (e.g. `/islandora/PID`), if the PID field is populated in the Drupal 8 node. If the PID field is not present or populated, it does nothing.
+A first attempt at addressing https://github.com/Islandora-CLAW/CLAW/issues/822. Create a URL alias for a node from its Islandora 7.x path (e.g. `/islandora/PID`), if the PID field is populated in the Drupal 8 node. If the PID field is not present or not populated, it does nothing.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ A first attempt at addressing https://github.com/Islandora-CLAW/CLAW/issues/822.
 
 ## Usage
 
-There is no user interface to this module. It simply creates a URL alias from `/islandora/object/PID` to `/node/NID` if the required conditions are met.
+There is no user interface to this module. It simply creates a URL alias from `/islandora/object/PID` to `/node/NID` if the required conditions as describe in the "Introduction" are met.
 
 ## Configuration
 
