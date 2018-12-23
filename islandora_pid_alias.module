@@ -1,16 +1,18 @@
 <?php
 
+use Drupal\node\NodeInterface;
+
 /**
- * Implements hook_entity_insert().
+ * Implements hook_node_insert().
  */
-function islandora_pid_alias_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+function islandora_pid_alias_node_insert(NodeInterface $node) {
   // @todo: Make the entity types configurable.
-  if ($entity->getType() == 'islandora_object') {
-    if ($entity->hasField('field_pid')) {
-      $pid_value = $entity->get('field_pid')->getValue();
+  if ($node->getType() == 'islandora_object') {
+    if ($node->hasField('field_pid')) {
+      $pid_value = $node->get('field_pid')->getValue();
       $pid = $pid_value[0]['value'];
       if (strlen($pid)) {
-        $path = \Drupal::service('path.alias_storage')->save("/node/" . $entity->id(), "/object/" . $pid, "en");
+        $path = \Drupal::service('path.alias_storage')->save("/node/" . $node->id(), "/object/" . $pid, "en");
       }
     }
   }
